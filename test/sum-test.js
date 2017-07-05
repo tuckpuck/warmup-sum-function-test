@@ -14,5 +14,10 @@ describe ('Sum', function() {
       expect(sum()).to.equal(0);
       assert.equal(sum(),0);
     });
-    
+
+    it('Should return an error if using a data type other than integer', function() {
+      expect(sum()).to.be.a('integer', 'data must be in the form of an integer');
+      assert.isNumber(sum());
+    });
+
 });
